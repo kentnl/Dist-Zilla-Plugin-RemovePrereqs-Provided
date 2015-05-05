@@ -1,5 +1,5 @@
 ---
-abstract: 'Remove prereqs that are already provided.'
+abstract: 'Remove prerequisites that are already provided.'
 author:
   - 'Kent Fredric <kentnl@cpan.org>'
 build_requires:
@@ -24,8 +24,8 @@ provides:
 recommends:
   Moose: '2.000'
 requires:
-  Dist::Zilla::Plugin::RemovePrereqs::Provided: '0'
   Dist::Zilla::Role::PrereqSource: '0'
+  Dist::Zilla::Util::ConfigDumper: '0'
   Moose: '0'
   Moose::Util::TypeConstraints: '0'
   perl: '5.006'
@@ -38,6 +38,13 @@ x_Dist_Zilla:
   perl:
     version: '5.021009'
   plugins:
+    -
+      class: Dist::Zilla::Plugin::Bootstrap::lib
+      config:
+        Dist::Zilla::Role::Bootstrap:
+          try_built: ~
+      name: Bootstrap::lib
+      version: '1.001000'
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@Author::KENTNL/MetaConfig'
@@ -492,14 +499,6 @@ x_Dist_Zilla:
           phase: develop
           type: requires
       name: '@Author::KENTNL/::Role::BundleDeps'
-      version: '5.034'
-    -
-      class: Dist::Zilla::Plugin::Prereqs
-      config:
-        Dist::Zilla::Plugin::Prereqs:
-          phase: runtime
-          type: requires
-      name: Prereqs
       version: '5.034'
     -
       class: Dist::Zilla::Plugin::FinderCode

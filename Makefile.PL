@@ -7,7 +7,7 @@ use 5.006;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Remove prereqs that are already provided.",
+  "ABSTRACT" => "Remove prerequisites that are already provided.",
   "AUTHOR" => "Kent Fredric <kentnl\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
@@ -18,8 +18,8 @@ my %WriteMakefileArgs = (
   "MIN_PERL_VERSION" => "5.006",
   "NAME" => "Dist::Zilla::Plugin::RemovePrereqs::Provided",
   "PREREQ_PM" => {
-    "Dist::Zilla::Plugin::RemovePrereqs::Provided" => 0,
     "Dist::Zilla::Role::PrereqSource" => 0,
+    "Dist::Zilla::Util::ConfigDumper" => 0,
     "Moose" => 0,
     "Moose::Util::TypeConstraints" => 0,
     "strict" => 0,
@@ -38,8 +38,8 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "Dist::Zilla::Plugin::RemovePrereqs::Provided" => 0,
   "Dist::Zilla::Role::PrereqSource" => 0,
+  "Dist::Zilla::Util::ConfigDumper" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
   "Moose" => 0,

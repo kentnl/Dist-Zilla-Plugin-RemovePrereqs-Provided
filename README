@@ -1,5 +1,10 @@
 Dist::Zilla::Plugin::RemovePrereqs::Provided
 
+This module is a utility for people who are working with self-consuming
+code ( predominantly "Dist::Zilla" distributions ) who wish to avoid
+self-dependencies in cases where some other prerequisite providing tool
+is over-zealous in determining prerequisites.
+
 This is an initial implementation that assumes you have "[MetaProvides]"
 of some description in place, and uses the data it provides to make sure
 the same modules don't exist as prerequisites.

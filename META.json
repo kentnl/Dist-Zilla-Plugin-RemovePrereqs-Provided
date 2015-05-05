@@ -1,5 +1,5 @@
 {
-   "abstract" : "Remove prereqs that are already provided.",
+   "abstract" : "Remove prerequisites that are already provided.",
    "author" : [
       "Kent Fredric <kentnl@cpan.org>"
    ],
@@ -33,6 +33,7 @@
             "Dist::Zilla::Plugin::Author::KENTNL::TravisCI" : "0.001002",
             "Dist::Zilla::Plugin::Authority" : "1.006",
             "Dist::Zilla::Plugin::AutoPrereqs" : "0",
+            "Dist::Zilla::Plugin::Bootstrap::lib" : "0",
             "Dist::Zilla::Plugin::BumpVersionAfterRelease" : "0",
             "Dist::Zilla::Plugin::ConfirmRelease" : "0",
             "Dist::Zilla::Plugin::CopyFilesFromBuild" : "0",
@@ -95,8 +96,8 @@
             "Moose" : "2.000"
          },
          "requires" : {
-            "Dist::Zilla::Plugin::RemovePrereqs::Provided" : "0",
             "Dist::Zilla::Role::PrereqSource" : "0",
+            "Dist::Zilla::Util::ConfigDumper" : "0",
             "Moose" : "0",
             "Moose::Util::TypeConstraints" : "0",
             "perl" : "5.006",
@@ -134,6 +135,16 @@
          "version" : "5.021009"
       },
       "plugins" : [
+         {
+            "class" : "Dist::Zilla::Plugin::Bootstrap::lib",
+            "config" : {
+               "Dist::Zilla::Role::Bootstrap" : {
+                  "try_built" : null
+               }
+            },
+            "name" : "Bootstrap::lib",
+            "version" : "1.001000"
+         },
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",
             "name" : "@Author::KENTNL/MetaConfig",
@@ -725,17 +736,6 @@
                }
             },
             "name" : "@Author::KENTNL/::Role::BundleDeps",
-            "version" : "5.034"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::Prereqs",
-            "config" : {
-               "Dist::Zilla::Plugin::Prereqs" : {
-                  "phase" : "runtime",
-                  "type" : "requires"
-               }
-            },
-            "name" : "Prereqs",
             "version" : "5.034"
          },
          {

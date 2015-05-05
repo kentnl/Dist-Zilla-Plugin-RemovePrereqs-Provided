@@ -1,7 +1,4 @@
 {
-   "failures" : {
-      "Dist::Zilla::Plugin::RemovePrereqs::Provided" : "module was not found in INC"
-   },
    "modules" : {
       "CPAN::Meta" : "2.150001",
       "Dist::Zilla" : "5.034",
@@ -10,6 +7,7 @@
       "Dist::Zilla::Plugin::Author::KENTNL::TravisCI" : "0.001002",
       "Dist::Zilla::Plugin::Authority" : "1.009",
       "Dist::Zilla::Plugin::AutoPrereqs" : "5.034",
+      "Dist::Zilla::Plugin::Bootstrap::lib" : "1.001000",
       "Dist::Zilla::Plugin::BumpVersionAfterRelease" : "0.009",
       "Dist::Zilla::Plugin::ConfirmRelease" : "5.034",
       "Dist::Zilla::Plugin::CopyFilesFromBuild" : "0.150250",
@@ -55,6 +53,7 @@
       "Dist::Zilla::Plugin::UploadToCPAN" : "5.034",
       "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.024001",
       "Dist::Zilla::Role::PrereqSource" : "5.034",
+      "Dist::Zilla::Util::ConfigDumper" : "0.003006",
       "ExtUtils::MakeMaker" : "7.04",
       "File::Spec" : "3.53",
       "Moose" : "2.1403",
