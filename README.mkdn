@@ -1,0 +1,27 @@
+# NAME
+
+Dist::Zilla::Plugin::RemovePrereqs::Provided - Remove prerequisites that are already provided.
+
+# VERSION
+
+version 0.001000
+
+# DESCRIPTION
+
+This module is a utility for people who are working with self-consuming code ( predominantly `Dist::Zilla` distributions )
+who wish to avoid self-dependencies in cases where some other prerequisite providing tool is over-zealous in determining
+prerequisites.
+
+This is an initial implementation that assumes you have [`[MetaProvides]`](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides) of some
+description in place, and uses the data it provides to make sure the same modules don't exist as prerequisites.
+
+# AUTHOR
+
+Kent Fredric <kentnl@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
