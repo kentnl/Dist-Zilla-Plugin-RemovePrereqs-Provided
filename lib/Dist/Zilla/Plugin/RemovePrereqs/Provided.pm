@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::RemovePrereqs::Provided;
 
-our $VERSION = '0.001000';
+our $VERSION = '0.001001';
 
 # ABSTRACT: Remove prerequisites that are already provided.
 
