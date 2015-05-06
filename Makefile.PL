@@ -32,8 +32,7 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
     "Test::DZil" => 0,
-    "Test::More" => "0.89",
-    "recommended" => 0
+    "Test::More" => "0.89"
   },
   "VERSION" => "0.001000",
   "test" => {
@@ -54,7 +53,6 @@ my %FallbackPrereqs = (
   "Moose::Util::TypeConstraints" => 0,
   "Test::DZil" => 0,
   "Test::More" => "0.89",
-  "recommended" => 0,
   "strict" => 0,
   "warnings" => 0
 );

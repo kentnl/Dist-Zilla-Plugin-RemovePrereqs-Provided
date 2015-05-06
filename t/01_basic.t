@@ -4,11 +4,9 @@ use warnings;
 use Test::More;
 
 # ABSTRACT: A basic test
-use recommended "Dist::Zilla::Plugin::MetaProvides::Package";
-
 BEGIN {
-  plan skip_all => "Requires [MetaProvides::Package]"
-    unless recommended->has("Dist::Zilla::Plugin::MetaProvides::Package");
+  my $package = "Dist::Zilla::Plugin::MetaProvides::Package";
+  eval "require $package; 1" or plan skip_all => "Requires $package";
 }
 
 use Dist::Zilla::Plugin::Prereqs;

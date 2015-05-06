@@ -108,6 +108,7 @@
       "test" : {
          "recommends" : {
             "CPAN::Meta" : "2.120900",
+            "Dist::Zilla::Plugin::MetaProvides::Package" : "0",
             "ExtUtils::MakeMaker" : "7.00",
             "Test::More" : "0.99"
          },
@@ -119,8 +120,7 @@
             "File::Spec" : "0",
             "Test::DZil" : "0",
             "Test::More" : "0.89",
-            "perl" : "5.006",
-            "recommended" : "0"
+            "perl" : "5.006"
          }
       }
    },
@@ -752,6 +752,17 @@
                }
             },
             "name" : "@Author::KENTNL/::Role::BundleDeps",
+            "version" : "5.034"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Prereqs",
+            "config" : {
+               "Dist::Zilla::Plugin::Prereqs" : {
+                  "phase" : "test",
+                  "type" : "recommends"
+               }
+            },
+            "name" : "TestRecommends",
             "version" : "5.034"
          },
          {

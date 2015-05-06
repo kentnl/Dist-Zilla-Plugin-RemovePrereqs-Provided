@@ -11,7 +11,6 @@ build_requires:
   Test::DZil: '0'
   Test::More: '0.89'
   perl: '5.006'
-  recommended: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
   perl: '5.006'
@@ -508,6 +507,14 @@ x_Dist_Zilla:
           phase: develop
           type: requires
       name: '@Author::KENTNL/::Role::BundleDeps'
+      version: '5.034'
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: test
+          type: recommends
+      name: TestRecommends
       version: '5.034'
     -
       class: Dist::Zilla::Plugin::FinderCode

@@ -93,6 +93,7 @@ do { my $x = {
        'test' => {
                    'recommends' => {
                                      'CPAN::Meta' => '2.120900',
+                                     'Dist::Zilla::Plugin::MetaProvides::Package' => '0',
                                      'ExtUtils::MakeMaker' => '7.00',
                                      'Test::More' => '0.99'
                                    },
@@ -104,8 +105,7 @@ do { my $x = {
                                    'File::Spec' => '0',
                                    'Test::DZil' => '0',
                                    'Test::More' => '0.89',
-                                   'perl' => '5.006',
-                                   'recommended' => '0'
+                                   'perl' => '5.006'
                                  }
                  }
      };
