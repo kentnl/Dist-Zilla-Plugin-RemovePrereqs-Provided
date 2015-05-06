@@ -26,9 +26,14 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
+    "Dist::Zilla::Plugin::GatherDir" => 0,
+    "Dist::Zilla::Plugin::Prereqs" => 0,
+    "Dist::Zilla::Util::Test::KENTNL" => "1.005000",
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
-    "Test::More" => "0.89"
+    "Test::DZil" => 0,
+    "Test::More" => "0.89",
+    "recommended" => 0
   },
   "VERSION" => "0.001000",
   "test" => {
@@ -38,13 +43,18 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Dist::Zilla::Plugin::GatherDir" => 0,
+  "Dist::Zilla::Plugin::Prereqs" => 0,
   "Dist::Zilla::Role::PrereqSource" => 0,
   "Dist::Zilla::Util::ConfigDumper" => 0,
+  "Dist::Zilla::Util::Test::KENTNL" => "1.005000",
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
   "Moose" => 0,
   "Moose::Util::TypeConstraints" => 0,
+  "Test::DZil" => 0,
   "Test::More" => "0.89",
+  "recommended" => 0,
   "strict" => 0,
   "warnings" => 0
 );

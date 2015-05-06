@@ -3,10 +3,15 @@ abstract: 'Remove prerequisites that are already provided.'
 author:
   - 'Kent Fredric <kentnl@cpan.org>'
 build_requires:
+  Dist::Zilla::Plugin::GatherDir: '0'
+  Dist::Zilla::Plugin::Prereqs: '0'
+  Dist::Zilla::Util::Test::KENTNL: '1.005000'
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
+  Test::DZil: '0'
   Test::More: '0.89'
   perl: '5.006'
+  recommended: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
   perl: '5.006'
