@@ -49,6 +49,10 @@ sub _get_provides_metaprovides {
 my @phases = qw(configure build test runtime develop);
 my @types  = qw(requires recommends suggests conflicts);
 
+=for Pod::Coverage register_prereqs
+
+=cut
+
 sub register_prereqs {
   my ($self)    = @_;
   my $prereqs   = $self->zilla->prereqs;
