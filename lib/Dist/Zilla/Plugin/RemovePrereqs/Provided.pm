@@ -49,6 +49,10 @@ sub _get_provides_metaprovides {
 my @phases = qw(configure build test runtime develop);
 my @types  = qw(requires recommends suggests conflicts);
 
+
+
+
+
 sub register_prereqs {
   my ($self)    = @_;
   my $prereqs   = $self->zilla->prereqs;
@@ -89,6 +93,8 @@ prerequisites.
 
 This is an initial implementation that assumes you have L<< C<[MetaProvides]>|Dist::Zilla::Plugin::MetaProvides >> of some
 description in place, and uses the data it provides to make sure the same modules don't exist as prerequisites.
+
+=for Pod::Coverage register_prereqs
 
 =head1 AUTHOR
 
