@@ -24,7 +24,7 @@ name: Dist-Zilla-Plugin-RemovePrereqs-Provided
 provides:
   Dist::Zilla::Plugin::RemovePrereqs::Provided:
     file: lib/Dist/Zilla/Plugin/RemovePrereqs/Provided.pm
-    version: '0.001001'
+    version: '0.001002'
 recommends:
   Moose: '2.000'
 requires:
@@ -39,4 +39,4 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-RemovePrereqs-Provided/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-RemovePrereqs-Provided
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-RemovePrereqs-Provided.git
-version: '0.001001'
+version: '0.001002'
