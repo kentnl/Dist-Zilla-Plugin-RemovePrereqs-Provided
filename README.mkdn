@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::RemovePrereqs::Provided - Remove prerequisites that are alr
 
 # VERSION
 
-version 0.001001
+version 0.001002
 
 # DESCRIPTION
 
